@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/styles.css",
+      "dest": "/styles.css"
+    },
+    {
+      "src": "/script.js",
+      "dest": "/script.js"
+    },
+    {
+      "src": "/logo.PNG",
+      "dest": "/logo.PNG"
+    },
+    {
+      "src": "/1.JPEG",
+      "dest": "/1.JPEG"
+    },
+    {
+      "src": "/2.JPG",
+      "dest": "/2.JPG"
+    },
+    {
+      "src": "/3.JPG",
+      "dest": "/3.JPG"
+    },
+    {
+      "src": "/favicon.PNG",
+      "dest": "/favicon.PNG"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ]
+}

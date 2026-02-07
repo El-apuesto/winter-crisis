@@ -76,11 +76,11 @@ body::before {
 
 /* Brand Logo */
 .brand-logo {
-    margin-bottom: 3rem;
+    margin-bottom: 0.5rem;
 }
 
 .brand-logo-img {
-    max-height: 100px;
+    max-height: 30px;
     width: auto;
     filter: brightness(1.2) contrast(1.15) drop-shadow(0 0 20px rgba(192, 192, 192, 0.3));
     transition: all 0.4s ease;
@@ -91,14 +91,19 @@ body::before {
     transform: scale(1.02);
 }
 
-/* Hero Section */
+/* Hero Section - Fixed Header */
 .hero {
-    height: 100vh;
-    position: relative;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    background: #000;
+    border-bottom: 1px solid rgba(192, 192, 192, 0.2);
+    z-index: 9999;
 }
 
 .hero-background {
@@ -116,7 +121,7 @@ body::before {
 
 .hero-content {
     text-align: center;
-    z-index: 2;
+    z-index: 10;
     animation: fadeInUp 1.5s ease-out;
 }
 
@@ -141,16 +146,16 @@ body::before {
 
 .hero-title {
     font-family: 'Playfair Display', serif;
-    font-size: 4.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.3rem;
     color: #f5f5f5;
     text-shadow: 0 4px 30px rgba(192, 192, 192, 0.3);
     letter-spacing: 0.02em;
 }
 
 .hero-subtitle {
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: #b8b8b8;
     font-weight: 300;
     letter-spacing: 0.08em;
@@ -159,16 +164,20 @@ body::before {
 
 /* Products Section */
 .products {
-    padding: 8rem 0;
+    padding: 0.5rem 0;
     position: relative;
     z-index: 2;
+    margin-top: 80px;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 4rem;
-    margin-top: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .product-card {
@@ -191,7 +200,7 @@ body::before {
 }
 
 .product-image {
-    height: 450px;
+    height: 175px;
     position: relative;
     overflow: hidden;
     background: #000;
@@ -264,7 +273,7 @@ body::before {
 }
 
 .product-info {
-    padding: 2.5rem;
+    padding: 1.2rem;
     background: linear-gradient(
         180deg,
         rgba(15, 15, 15, 0.9) 0%,
@@ -274,39 +283,39 @@ body::before {
 
 .product-name {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: 700;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
     color: #f5f5f5;
     letter-spacing: 0.02em;
     text-shadow: 0 2px 10px rgba(192, 192, 192, 0.1);
 }
 
 .product-description {
-    font-size: 1.15rem;
+    font-size: 0.9rem;
     color: #b0b0b0;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1rem;
     font-weight: 300;
     letter-spacing: 0.01em;
 }
 
 .product-price {
     font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #d4d4d4;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-shadow: 0 2px 15px rgba(192, 192, 192, 0.2);
 }
 
 .purchase-btn {
     width: 100%;
-    padding: 1.2rem 2rem;
+    padding: 0.8rem 1.5rem;
     background: transparent;
     border: 2px solid rgba(192, 192, 192, 0.4);
     color: #d4d4d4;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15rem;
+    font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.1em;
     cursor: pointer;

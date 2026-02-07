@@ -9,7 +9,22 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname)));
+
+// Explicit static file serving
+app.use('/styles.css', express.static(path.join(__dirname, 'styles.css')));
+app.use('/script.js', express.static(path.join(__dirname, 'script.js')));
+app.use('/logo.PNG', express.static(path.join(__dirname, 'logo.PNG')));
+app.use('/1.JPEG', express.static(path.join(__dirname, '1.JPEG')));
+app.use('/2.JPG', express.static(path.join(__dirname, '2.JPG')));
+app.use('/3.JPG', express.static(path.join(__dirname, '3.JPG')));
+app.use('/favicon.PNG', express.static(path.join(__dirname, 'favicon.PNG')));
+
+// General static serving
+app.use(express.static(path.join(__dirname), {
+    maxAge: '1d',
+    etag: true,
+    lastModified: true
+}));
 
 // Serve the main HTML file
 app.get('/', (req, res) => {
