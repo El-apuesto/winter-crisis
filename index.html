@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier Nocturne - Luxury Essentials</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="brand-logo">
+                <img src="logo.png" alt="Atelier Nocturne" class="brand-logo-img">
+            </div>
+            <h1 class="hero-title">Essential Protection</h1>
+            <p class="hero-subtitle">Where thermal engineering meets existential security</p>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="products">
+        <div class="container">
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-product="manhattan-retreat">
+                    <div class="product-image">
+                        <img src="1.jpeg" alt="Manhattan Retreat" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Manhattan Retreat</h3>
+                        <p class="product-description">Urban sanctuary woven in strategic fibers</p>
+                        <div class="product-price">$1,125</div>
+                        <button class="purchase-btn" data-price="112500" data-product-id="manhattan-retreat">
+                            Acquire
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-product="delivery-treatise">
+                    <div class="product-image">
+                        <img src="2.jpg" alt="Delivery Treatise" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Delivery Treatise</h3>
+                        <p class="product-description">The final word in thermal logistics</p>
+                        <div class="product-price">$1,399</div>
+                        <button class="purchase-btn" data-price="139900" data-product-id="delivery-treatise">
+                            Acquire
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-product="geometric-consensus">
+                    <div class="product-image">
+                        <img src="3.jpg" alt="Geometric Consensus" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Geometric Consensus</h3>
+                        <p class="product-description">Empirical warmth through conventional wisdom</p>
+                        <div class="product-price">$1,015</div>
+                        <button class="purchase-btn" data-price="101500" data-product-id="geometric-consensus">
+                            Acquire
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Atelier Nocturne. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
