@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier Nocturne - Luxury Essentials</title>
+    <link rel="icon" type="image/png" href="4/favicon.PNG">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://web.squarecdn.com/v1/square.js"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="brand-logo">
+                <img src="logo.PNG" alt="Atelier Nocturne" class="brand-logo-img">
+            </div>
+            <h1 class="hero-title">Essential Protection</h1>
+            <p class="hero-subtitle">Where thermal engineering meets existential security</p>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="products">
+        <div class="container">
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-product="the-familiar-signal">
+                    <div class="product-image">
+                        <img src="1/" alt="The Familiar Signal" class="product-img">
+                        <div class="product-overlay">
+                            <div class="overlay-content">
+                                <h4 class="overlay-title">The Familiar Signal</h4>
+                                <p class="overlay-story">Cast your signal with precision engineering and thermal excellence</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">The Familiar Signal</h3>
+                        <p class="product-description">Cast your signal</p>
+                        <div class="product-price">$149</div>
+                        <button class="purchase-btn" data-price="14900" data-product-id="the-familiar-signal">
+                            Acquire
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-product="premium-reserves">
+                    <div class="product-image">
+                        <img src="2/" alt="Premium Reserves" class="product-img">
+                        <div class="product-overlay">
+                            <div class="overlay-content">
+                                <h4 class="overlay-title">Premium Reserves</h4>
+                                <p class="overlay-story">Premium thermal reserves for the discerning individual</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Premium Reserves</h3>
+                        <p class="product-description">Premium thermal protection</p>
+                        <div class="product-price">$149</div>
+                        <button class="purchase-btn" data-price="14900" data-product-id="premium-reserves">
+                            Acquire
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-product="fundamental-holdings">
+                    <div class="product-image">
+                        <img src="3/" alt="Fundamental Holdings" class="product-img">
+                        <div class="product-overlay">
+                            <div class="overlay-content">
+                                <h4 class="overlay-title">Fundamental Holdings</h4>
+                                <p class="overlay-story">Harness the fundamentals of thermal engineering</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Fundamental Holdings</h3>
+                        <p class="product-description">Harness the fundamentals</p>
+                        <div class="product-price">$149</div>
+                        <button class="purchase-btn" data-price="14900" data-product-id="fundamental-holdings">
+                            Acquire
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Atelier Nocturne. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Complete Purchase</h3>
+            <div id="card-container"></div>
+            <button id="pay-button">Pay Now</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
