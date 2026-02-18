@@ -91,6 +91,52 @@ body::before {
     transform: scale(1.02);
 }
 
+/* Header Navigation */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(192, 192, 192, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-logo {
+    height: 40px;
+    width: auto;
+    filter: brightness(1.2) contrast(1.1);
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #d4d4d4;
+    text-decoration: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #f0f0f0;
+}
+
 /* Hero Section - Full Height */
 .hero {
     height: 100vh;
@@ -104,6 +150,7 @@ body::before {
     background: #000;
     border-bottom: 1px solid rgba(192, 192, 192, 0.2);
     z-index: 9999;
+    padding-top: 80px; /* Account for fixed header */
 }
 
 .hero-background {
