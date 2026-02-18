@@ -194,8 +194,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
-    if (hero) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+    const heroBackground = document.querySelector('.hero-background');
+    
+    if (heroBackground) {
+        heroBackground.style.transform = `translateY(${scrolled * 0.3}px)`;
     }
 });
 
