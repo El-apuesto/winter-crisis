@@ -190,13 +190,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Parallax effect for hero section and crisis bar
+// Parallax effect for hero section, crisis bar, and header navigation
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
     const heroBackground = document.querySelector('.hero-background');
     const crisisBar = document.querySelector('.crisis-bar');
     const crisisLogo = document.querySelector('.crisis-logo');
+    const header = document.querySelector('.header');
+    const headerLogo = document.querySelector('.header-logo');
     
     // Hero parallax
     if (heroBackground) {
@@ -206,6 +208,16 @@ window.addEventListener('scroll', () => {
     // Crisis bar parallax - logo moves up when scrolling down, down when scrolling up
     if (crisisLogo) {
         crisisLogo.style.transform = `translateY(${-scrolled * 0.5}px) scale(${1 - scrolled * 0.0005})`;
+    }
+    
+    // Header navigation parallax - moves down against scroll direction
+    if (header) {
+        header.style.transform = `translateY(${scrolled * 0.2}px)`;
+    }
+    
+    // Header logo parallax - moves down against scroll direction
+    if (headerLogo) {
+        headerLogo.style.transform = `translateY(${scrolled * 0.3}px) scale(${1 + scrolled * 0.0003})`;
     }
     
     // Crisis bar background effect
