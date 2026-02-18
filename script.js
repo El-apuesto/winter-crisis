@@ -190,14 +190,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Parallax effect for hero section
+// Parallax effect for hero section and crisis bar
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
     const heroBackground = document.querySelector('.hero-background');
+    const crisisBar = document.querySelector('.crisis-bar');
+    const crisisLogo = document.querySelector('.crisis-logo');
     
+    // Hero parallax
     if (heroBackground) {
         heroBackground.style.transform = `translateY(${scrolled * 0.3}px)`;
+    }
+    
+    // Crisis bar parallax - logo moves up when scrolling down, down when scrolling up
+    if (crisisLogo) {
+        crisisLogo.style.transform = `translateY(${-scrolled * 0.5}px) scale(${1 - scrolled * 0.0005})`;
+    }
+    
+    // Crisis bar background effect
+    if (crisisBar) {
+        crisisBar.style.background = `rgba(0, 0, 0, ${0.95 + scrolled * 0.0002})`;
     }
 });
 
