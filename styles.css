@@ -247,7 +247,7 @@ body::before {
 }
 
 .product-image {
-    height: 175px;
+    height: 500px;
     position: relative;
     overflow: hidden;
     background: #000;
@@ -456,10 +456,7 @@ body::before {
         letter-spacing: 0.2em;
     }
     
-    .product-image {
-        height: 400px;
-    }
-    
+        
     .overlay-content {
         padding: 2rem 1.5rem;
     }
