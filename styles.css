@@ -142,7 +142,7 @@ body::before {
 
 /* Header Navigation */
 .header {
-    position: fixed;
+    position: absolute; /* Changed from fixed */
     top: 100px; /* Position below crisis bar */
     left: 0;
     width: 100%;
